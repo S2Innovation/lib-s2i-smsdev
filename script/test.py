@@ -6,7 +6,7 @@
 # Imports
 import sys, os
 sys.path.insert(0, os.getcwd())
-from smsmodem import SmsSender
+from smslib import SmsSender
 
 
 # Script

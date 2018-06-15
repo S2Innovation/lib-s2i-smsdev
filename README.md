@@ -1,17 +1,17 @@
-python-smsmodem
-===============
+panic-smslib
+=============
 ***
 
-Provide an interface for SMSGateway device server MOXA.
+Provide an interface for SMSGateway device server for MOXA. Implemeted for SOLARIS.
 
 Usage
 -----
 
 ```python
-from smsmodem import SmsSender,
+from smslib import SMSThred,
 
-sender = SmsSender("192.168.2.1")
-sender.send_sms("0123456789", "Hello world!")
+sender = SMSThread(["+48.....", ], "message")
+sender.start()
 ```
 
 Installation
