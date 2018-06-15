@@ -20,7 +20,7 @@ class SMSThread(Thread):
     def run(self):
         # just iterate over list of recipients
         for number in self.destinations:
-            send_sms(number, self.message)
+            self.send_sms(number, self.message)
 
     def send_sms(self, numbers, message, extended=True, priority=2):
         """Send a given text message to the given numbers.
