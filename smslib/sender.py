@@ -13,7 +13,7 @@ class SMSThread(Thread):
 
     def __init__(self, message='', dest='',  username='', password='', source=''):
         """Initialize with hostname, port and login of the server."""
-
+        Thread.__init__(self)
         self.message = message
         self.destinations = dest
 
