@@ -44,7 +44,7 @@ class SMSThread(Thread):
 
             device = PyTango.DeviceProxy(list_of_devs[0])
             sms_message = ';'.join([numbers, message])
-            device.command_inout('sendSMS',sms_message,timeout=15.0)
+            device.command_inout_asynch('sendSMS', sms_message, True)
         except Exception as e:
 
             print('PROBLEM to send sms {0}'.format(e))
